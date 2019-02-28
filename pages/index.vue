@@ -1,8 +1,7 @@
 <template>
   <section class="container">
     <div>
-      <logo />
-      <h1 class="title">
+      <h1 class="title mt-50">
         Stock-Trader
       </h1>
       <h2 class="subtitle">
@@ -25,7 +24,7 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import Logo from '~/components/templates1/Logo.vue'
 
 export default {
   components: {

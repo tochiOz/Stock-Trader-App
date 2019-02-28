@@ -3,7 +3,7 @@
     <TheHeader/>
 
     <div>
-      <nuxt/>
+      <nuxt class="min-h-screen"/>
     </div>
 
     <TheFooter/>
@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import TheHeader from '~/components/header'
-import TheFooter from '~/components/footer'
+import TheHeader from '~/components/templates1/header'
+import TheFooter from '~/components/templates1/footer'
 export default {
   components: {
     TheHeader,

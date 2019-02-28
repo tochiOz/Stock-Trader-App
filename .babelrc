@@ -10,8 +10,10 @@
             }
           }
         ],
-        "@nuxt/babel-preset-app"
+        "@nuxt/babel-preset-app",
+        ["stage-2"]
       ]
     }
   }
 }
+//the stage 2 preset unlocks the spread operator.
