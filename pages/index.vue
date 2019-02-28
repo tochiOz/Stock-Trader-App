@@ -1,26 +1,23 @@
 <template>
-  <section class="container">
-    <div>
-      <h1 class="title mt-50">
-        Stock-Trader
-      </h1>
-      <h2 class="subtitle">
-        A Stock-Exchange App, To Help Buy Shares
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >GitHub</a>
+<div >
+  <div class="md:w-1/3 sm:w-full xs:w-full rounded shadow-lg max-h-64">
+      <div class="h-16 bg-teal-dark p-5 leading text-white font-bold text-lg">
+        <h3>Name <small>Price: (PRICE)</small></h3>
+      </div>
+      <div class="px-6 py-6 flex justify-between">
+        <div class="w-2/3">
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" id="username" type="number" placeholder="Quantity">
+        </div>
+        <div class="w-1/3">
+           <button class="bg-teal-dark float-right hover:bg-white text-white py-2 px-6 float-l rounded hover:text-teal-dark focus:outline-none focus:shadow-outline" type="button">
+            Buy
+          </button>
+        </div>
       </div>
     </div>
-  </section>
+</div>
+    
+
 </template>
 
 <script>
@@ -40,12 +37,9 @@ export default {
 }
 */
 .container {
-  margin: 0 auto;
+ 
   min-height: 83.2vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+ 
 }
 
 .title {
