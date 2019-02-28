@@ -2,8 +2,8 @@
   <div class="w-full">
     <TheHeader/>
 
-    <div>
-      <nuxt class="min-h-screen"/>
+    <div class="min-h-64 my-20 md:mx-24 ">
+      <nuxt />
     </div>
 
     <TheFooter/>
