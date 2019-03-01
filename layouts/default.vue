@@ -17,7 +17,11 @@ export default {
   components: {
     TheHeader,
     TheFooter
-  }
+  },
+
+  // created () {
+  //   this.$store.dispatch('initStocks')
+  // }//this enables the data avialable to all the whole app.
 }
 </script>
 <style>
@@ -44,7 +48,7 @@ html {
 .button--green {
   display: inline-block;
   border-radius: 4px;
-  border: 1px solid #3b8070;
+  border: 1px solid #ff7402;
   color: #3b8070;
   text-decoration: none;
   padding: 10px 30px;
