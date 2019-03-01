@@ -1,23 +1,24 @@
 <template>
-<div >
-  <div class="md:w-1/3 sm:w-full xs:w-full rounded shadow-lg max-h-64">
-      <div class="h-16 bg-teal-dark p-5 leading text-white font-bold text-lg">
-        <h3>Name <small>Price: (PRICE)</small></h3>
+  <div class=" xs:m-10 xs:flex xs:flex-wrap">
+      <div class="border sm:px-16 sm:py-12 border-teal-dark 
+          rounded bg-auto bg-white mb-100">
+        <p class="text-teal-dark md:text-6xl">
+          <span>Trade or View Your Portfolio</span>
+        </p>
+        <br><br>
+        <p class="mb-2 text-xl">
+          <span>You may save & load your Data</span>
+        </p>
+        <p class="mb-2 text-xl">
+          <span>Click on 'End Day' to begin a New Day</span>
+        </p>
+        <br>
+        <hr>
+        <p class="mb-1 text-2xl">
+          <span>Your Funds: ${{ funds }}</span>
+        </p>
       </div>
-      <div class="px-6 py-6 flex justify-between">
-        <div class="w-2/3">
-          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" id="username" type="number" placeholder="Quantity">
-        </div>
-        <div class="w-1/3">
-           <button class="bg-teal-dark float-right hover:bg-white text-white py-2 px-6 float-l rounded hover:text-teal-dark focus:outline-none focus:shadow-outline" type="button">
-            Buy
-          </button>
-        </div>
-      </div>
-    </div>
-</div>
-    
-
+  </div>
 </template>
 
 <script>
@@ -26,6 +27,12 @@ import Logo from '~/components/templates1/Logo.vue'
 export default {
   components: {
     Logo
+  },
+
+  computed: {
+    funds () {
+      return this.$store.getters['portfolio/funds']
+    }
   }
 }
 </script>
@@ -36,11 +43,7 @@ export default {
   @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 */
-.container {
- 
-  min-height: 83.2vh;
- 
-}
+
 
 .title {
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,

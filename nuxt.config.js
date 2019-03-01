@@ -28,14 +28,14 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '~/assets/css/tailwind.css'
+    '~/assets/css/tailwind.css',
+    '~/assets/css/main.css'
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-  ],
+  plugins: ['~/plugins/vue-swal'],
 
   /*
   ** Nuxt.js modules
@@ -43,6 +43,7 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    'vue-sweetalert2/nuxt'
   ],
   /*
   ** Axios module configuration
@@ -59,7 +60,14 @@ module.exports = {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-      
+      if (ctx.dev && ctx.isClient) {
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(js|vue)$/,
+          loader: 'eslint-loader',
+          exclude: /(node_modules)/
+        })
+      }
     }
   }
 }
