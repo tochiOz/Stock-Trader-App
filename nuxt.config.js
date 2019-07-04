@@ -35,7 +35,7 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: ['~/plugins/vue-swal'],
+  // plugins: ['~/plugins/vue-swal'],
 
   /*
   ** Nuxt.js modules
@@ -43,13 +43,17 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    'vue-sweetalert2/nuxt'
+    // 'vue-sweetalert2/nuxt'
   ],
   /*
   ** Axios module configuration
   */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
+  },
+
+  router: {
+    // middleware: 'router-auth'
   },
 
   /*
@@ -60,14 +64,14 @@ module.exports = {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-      if (ctx.dev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-      }
+      // if (ctx.dev && ctx.isClient) {
+      //   config.module.rules.push({
+      //     enforce: 'pre',
+      //     test: /\.(js|vue)$/,
+      //     loader: 'eslint-loader',
+      //     exclude: /(node_modules)/
+      //   })
+      // }
     }
   }
 }

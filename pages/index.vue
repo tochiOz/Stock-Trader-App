@@ -1,7 +1,7 @@
 <template>
-  <div class=" xs:m-10 xs:flex xs:flex-wrap">
-      <div class="border sm:px-16 sm:py-12 border-teal-dark 
-          rounded bg-auto bg-white mb-100">
+  <div class=" xs:m-10 xs:flex xs:flex-wrap justify-around">
+      <div class="border sm:px-16 sm:py-16 border-teal-dark 
+          rounded bg-auto bg-white sm:mb-100">
         <p class="text-teal-dark md:text-6xl">
           <span>Trade or View Your Portfolio</span>
         </p>
