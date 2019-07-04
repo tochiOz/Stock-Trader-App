@@ -10,8 +10,8 @@
             </app-stock>
             <!-- </div> -->
         </div>
-        <div class="bg-teal-dark text-center py-4 lg:px-4 my-32 ">
-            <div class="p-2 bg-orange items-center text-indigo-lightest leading-none lg:rounded-full 
+        <div class="bg-teal-darker text-center py-4 lg:px-4 my-32 ">
+            <div class="p-2 bg-teal-dark items-center text-indigo-lightest leading-none lg:rounded-full 
                         flex lg:inline-flex" role="alert">
                 <span class="flex rounded-full bg-white uppercase px-2 py-1 text-xs text-teal-darker font-bold mr-3">
                     New

@@ -45,14 +45,16 @@
                         </div>
                         <div class="items-center absolute border border-t-0 rounded-b-lg group-hover:visible w-full" 
                             :class="dialog ? 'block': 'hidden'">
-                            <a href="#" class="no-underline text-xl bg-white text-center px-4 py-2 block text-teal 
-                                hover:bg-teal-dark hover:teal-white ">
+                            <p class="no-underline text-xl hover:text-white cursor-pointer bg-white text-center px-4 py-2 block text-teal 
+                                hover:bg-teal-dark hover:teal-white "
+                                @click.prevent="saveDay">
                                 Save
-                            </a>
-                            <a href="#" class="no-underline text-xl bg-white text-center px-4 py-2 block text-teal 
-                                hover:bg-teal-dark hover:teal-white ">
+                            </p>
+                            <p class="no-underline text-xl hover:text-white cursor-pointer bg-white text-center px-4 py-2 block text-teal 
+                                hover:bg-teal-dark hover:teal-white "
+                                @click.prevent="loadStocks">
                                 Load
-                            </a>
+                            </p>
                         </div>
                     </div>                   
                 </div>
@@ -74,6 +76,8 @@
 </template>
 
 <script>
+
+import axios from 'axios'
 export default {
 
     data () {
@@ -100,6 +104,22 @@ export default {
 
         endDay () {
             this.$store.dispatch('stocks/randomizeStocks')
+        },
+
+        async saveDay() {
+            const data = {
+                funds: this.$store.getters['portfolio/funds'],
+                stockPortfolio: this.$store.getters['portfolio/stockPortfolio'],
+                stocks: this.$store.getters['stocks/stocks']
+            }
+
+            await axios.put('https://stock-trader-7af01.firebaseio.com/stocks' + '.json', data)
+            .then(res => console.log(res.data))
+            .catch(e => console.log(e))
+        },
+
+        async loadStocks() {
+            return this.$store.dispatch('loadData')
         }
     }
 }

@@ -17,7 +17,7 @@
                 </div>
                 <div class="w-1/3">
                     <button 
-                        class="bg-orange float-right hover:bg-white text-white py-2 px-6 float-l rounded hover:text-teal-dark focus:outline-none focus:shadow-outline" 
+                        class="bg-teal float-right hover:bg-white text-white py-2 px-6 float-l rounded hover:text-teal-dark focus:outline-none focus:shadow-outline" 
                         @click.prevent="buyShares" 
                         :disabled="quantity <= 0 && !isNaN(quantity) && noMoney">
                         {{ noMoney ? 'No Money' : 'Buy' }}
